@@ -1,0 +1,173 @@
+:root {
+    --all-color: #F7F7F7;
+    --all2-color: #ADCAE7;
+    --details-color: #C3B1A7;
+    --text-color: #22306F;
+}
+
+/*общее*/
+body {
+    margin: 0 0 0 0;
+    font-family: FreeMono, monospace;
+    background: linear-gradient(to bottom, var(--all-color) 0%, var(--all2-color) 80%);
+    font-size: larger;
+    
+}
+
+p {
+    color: var(--text-color);
+    text-align: left;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+h2 {
+    color: var(--text-color);
+}
+
+ul {
+    color: var(--text-color);
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.conteiner {
+    max-width: 60%;
+    margin: auto;
+}
+
+/*шапка*/
+header {
+    background-color: var(--all-color);
+    margin-bottom: 2%;
+    padding: 1%;
+    border-bottom: 3px solid var(--details-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 19%;
+}
+
+header nav .words {
+    margin-top: 2.5%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header nav a {
+    padding-left: 30px;
+}
+
+nav img {
+    width: 100px;
+    height: auto;
+}
+
+
+/*характеристики*/
+.Odetta_sila {
+    background-color: var(--all2-color);
+    margin-bottom: 2%;
+    display: flex;
+    border-radius: 15px;
+    border: 3px solid var(--details-color);
+    outline: 4px solid var(--all2-color);
+    padding: 20px 40px 20px 40px;
+    max-height: 700px;
+    position: relative;
+    min-height: 450px;
+}
+
+.Odetta_sila img {
+
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    padding-top: 20px;
+    max-height: 90%;
+}
+
+.Odetta_sila div:first-child {
+    padding-right: 620px;
+}
+
+/*вижуал*/
+.Odetta_visual {
+    background-color: var(--all2-color);
+    margin-bottom: 2%;
+    display: flex;
+    border-radius: 15px;
+    border: 3px solid var(--details-color);
+    outline: 4px solid var(--all2-color);
+    padding: 40px;
+    position: relative;
+    min-height: 300px;
+}
+
+.Odetta_visual img {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    max-width: 38%;
+}
+
+.Odetta_visual div:first-child {
+    padding-right: 600px;
+}
+
+/*история*/
+.Odetta_history {
+    background-color: var(--all2-color);
+    margin-bottom: 2%;
+    display: flex;
+    border-radius: 15px;
+    border: 3px solid var(--details-color);
+    outline: 4px solid var(--all2-color);
+    padding: 40px;
+    position: relative;
+    min-height: 450px;
+}
+
+.Odetta_history img {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    padding-top: 20px;
+    max-height: 90%;
+}
+
+.Odetta_history div:first-child {
+    padding-right: 600px;
+}
+
+
+/*подвал*/
+footer {
+    background-color: var(--all2-color);
+    padding: 1.5%;
+    border-top: 3px solid var(--details-color);
+}
+
+footer .words {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+footer nav img {
+    width: 130px;
+    height: auto;
+}
+
+footer p {
+    margin-bottom: auto;
+    text-align: center;
+}
