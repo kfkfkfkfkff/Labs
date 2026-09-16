@@ -24,21 +24,27 @@ a {
     text-decoration: none;
 }
 
-h2 {
+h1 {
     color: var(--text-color);
 }
 
 ul {
     color: var(--text-color);
+    list-style-type: none;
+    
 }
 
 li {
     margin-bottom: 10px;
 }
 
-.conteiner {
+main {
     max-width: 60%;
     margin: auto;
+}
+img{
+    border-radius: 15px;
+    padding-top: 10px;
 }
 
 /*шапка*/
@@ -68,8 +74,11 @@ header nav a {
 nav img {
     width: 100px;
     height: auto;
+    padding-top: 0;
 }
-
+nav ul{
+    display: flex;
+}
 
 /*характеристики*/
 .Odetta_sila {
@@ -79,24 +88,12 @@ nav img {
     border-radius: 15px;
     border: 3px solid var(--details-color);
     outline: 4px solid var(--all2-color);
-    padding: 20px 40px 20px 40px;
-    max-height: 700px;
-    position: relative;
-    min-height: 450px;
+    padding: 20px 40px 0px 40px;
+    height: 450px;
+
 }
 
-.Odetta_sila img {
 
-    position: absolute;
-    right: 40px;
-    bottom: 20px;
-    padding-top: 20px;
-    max-height: 90%;
-}
-
-.Odetta_sila div:first-child {
-    padding-right: 620px;
-}
 
 /*вижуал*/
 .Odetta_visual {
@@ -106,21 +103,15 @@ nav img {
     border-radius: 15px;
     border: 3px solid var(--details-color);
     outline: 4px solid var(--all2-color);
-    padding: 40px;
-    position: relative;
-    min-height: 300px;
+    padding: 40px 40px 0px 40px;
+    height: 350px;
+}
+.Odetta_visual img{
+    padding-top: 10px;
 }
 
-.Odetta_visual img {
-    position: absolute;
-    right: 40px;
-    bottom: 20px;
-    max-width: 38%;
-}
 
-.Odetta_visual div:first-child {
-    padding-right: 600px;
-}
+
 
 /*история*/
 .Odetta_history {
@@ -130,22 +121,11 @@ nav img {
     border-radius: 15px;
     border: 3px solid var(--details-color);
     outline: 4px solid var(--all2-color);
-    padding: 40px;
-    position: relative;
-    min-height: 450px;
+    padding: 20px 40px 0px 40px;
+    height: 450px;
 }
 
-.Odetta_history img {
-    position: absolute;
-    right: 40px;
-    bottom: 20px;
-    padding-top: 20px;
-    max-height: 90%;
-}
 
-.Odetta_history div:first-child {
-    padding-right: 600px;
-}
 
 
 /*подвал*/
@@ -171,3 +151,4 @@ footer p {
     margin-bottom: auto;
     text-align: center;
 }
+
