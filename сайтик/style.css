@@ -7,44 +7,47 @@
 
 /*общее*/
 body {
-    margin: 0 0 0 0;
+    margin: 0;
     font-family: FreeMono, monospace;
     background: linear-gradient(to bottom, var(--all-color) 0%, var(--all2-color) 80%);
-    font-size: larger;
-    
+    font-size: larger; 
 }
-
 p {
     color: var(--text-color);
     text-align: left;
+    margin: 8px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
-
 a {
     color: var(--text-color);
     text-decoration: none;
 }
-
 h1 {
     color: var(--text-color);
+    margin: 0 0 15px 0;
 }
-
 ul {
     color: var(--text-color);
     list-style-type: none;
-    
+    padding-left: 0;
+    margin: 0;
 }
-
 li {
     margin-bottom: 10px;
 }
-
 main {
     max-width: 60%;
     margin: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
-img{
+img {
     border-radius: 15px;
     padding-top: 10px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 /*шапка*/
@@ -54,19 +57,17 @@ header {
     padding: 1%;
     border-bottom: 3px solid var(--details-color);
 }
-
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 19%;
 }
-
 header nav .words {
     margin-top: 2.5%;
     font-size: 30px;
     font-weight: bold;
 }
-
 header nav a {
     padding-left: 30px;
 }
@@ -76,8 +77,10 @@ nav img {
     height: auto;
     padding-top: 0;
 }
-nav ul{
+nav ul {
     display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 /*характеристики*/
@@ -85,48 +88,76 @@ nav ul{
     background-color: var(--all2-color);
     margin-bottom: 2%;
     display: flex;
+    flex-wrap: wrap;
     border-radius: 15px;
     border: 3px solid var(--details-color);
     outline: 4px solid var(--all2-color);
-    padding: 20px 40px 0px 40px;
-    height: 450px;
-
+    padding: 20px 40px;
+    box-sizing: border-box;
+    gap: 20px;
+    align-items: flex-start;
 }
-
-
+.Odetta_sila .info {
+    flex: 1 1 300px;
+    min-width: 0;
+}
+.Odetta_sila img {
+    flex: 0 0 auto;
+    max-width: 400px;
+    width: 100%;
+}
+.Odetta_sila ul li {
+    padding-left: 20px;
+    list-style-type: none;
+}
 
 /*вижуал*/
 .Odetta_visual {
     background-color: var(--all2-color);
     margin-bottom: 2%;
     display: flex;
+    flex-wrap: wrap;
     border-radius: 15px;
     border: 3px solid var(--details-color);
     outline: 4px solid var(--all2-color);
-    padding: 40px 40px 0px 40px;
-    height: 350px;
+    padding: 40px;
+    box-sizing: border-box;
+    gap: 20px;
+    align-items: flex-start;
 }
-.Odetta_visual img{
-    padding-top: 10px;
+.Odetta_visual .info {
+    flex: 1 1 300px;
+    min-width: 0;
 }
-
-
-
+.Odetta_visual img {
+    flex: 0 0 auto;
+    max-width: 400px;
+    width: 100%;
+}
 
 /*история*/
 .Odetta_history {
     background-color: var(--all2-color);
     margin-bottom: 2%;
     display: flex;
+    flex-wrap: wrap;
     border-radius: 15px;
     border: 3px solid var(--details-color);
     outline: 4px solid var(--all2-color);
-    padding: 20px 40px 0px 40px;
-    height: 450px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    gap: 20px;
+    align-items: flex-start;
 }
-
-
-
+.Odetta_history .info {
+    flex: 1 1 300px;
+    min-width: 0;
+}
+.Odetta_history img {
+    flex: 0 0 auto;
+    max-width: 400px;
+    width: 100%;
+}
 
 /*подвал*/
 footer {
@@ -134,21 +165,91 @@ footer {
     padding: 1.5%;
     border-top: 3px solid var(--details-color);
 }
-
 footer .words {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
 }
-
 footer nav img {
     width: 130px;
     height: auto;
 }
-
 footer p {
     margin-bottom: auto;
     text-align: center;
 }
 
+/*адаптив*/
+
+/*1200px*/
+@media screen and (max-width: 1200px) {
+    main {
+        max-width: 80%;
+    }
+    nav {
+        margin: 0 5%;
+    }
+    header nav .words {
+        font-size: 24px;
+    }
+    .Odetta_sila,
+    .Odetta_visual,
+    .Odetta_history {
+        padding: 20px;
+    }
+}
+
+/*768px)*/
+@media screen and (max-width: 768px) {
+    body {
+        font-size: medium;
+    }
+    main {
+        max-width: 95%;
+        padding: 0 10px;
+    }
+    nav {
+        margin: 0 2%;
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    header nav .words {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    header nav a {
+        padding-left: 15px;
+    }
+    nav img {
+        width: 80px;
+    }
+    .Odetta_sila,
+    .Odetta_visual,
+    .Odetta_history {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .Odetta_sila .info,
+    .Odetta_visual .info,
+    .Odetta_history .info {
+        flex: 1 1 100%;
+    }
+    .Odetta_sila img,
+    .Odetta_visual img,
+    .Odetta_history img {
+        max-width: 100%;
+    }
+    footer nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer nav img {
+        width: 100px;
+    }
+}
