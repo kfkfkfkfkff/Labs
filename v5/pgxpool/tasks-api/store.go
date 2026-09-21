@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"go get github.com/kfkfkfkfkff/Labs/v5"
-	"go get github.com/kfkfkfkfkff/Labs/v5/pgxpool"
+	"github.com/jackc/pgx/v5"
+	"github.com/jackc/pgx/v5/pgxpool"
 )
 
 var ErrNotFound = errors.New("not found")
